@@ -51,9 +51,9 @@ const removeNotes = (title) => {
 const readContent = (title) => {
   const notes = loadNotes();
   const readNote = notes.find((note) => note.title === title);
-  if (note) {
-    console.log(chalk.inverse(node.title));
-    console.log(note.body);
+  if (readNote) {
+    console.log(chalk.inverse(readNote.title));
+    console.log(readNote.body);
   } else {
     console.log(chalk.bgRed("Note not found!!"));
   }
